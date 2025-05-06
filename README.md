@@ -9,8 +9,12 @@ We are testing 3 different models. The implementation of each is in a different 
    -file2.py -> description<br>
 
 2. GAT implemented on features extracted from T1 MRI images: T1_GAT<br>
-   -file.py -> description<br>
-   -file2.py -> description<br>
+   -brain_graph.py -> Class with all graph information per MRI<br>
+   -create_dataset.py -> Class to make dataset for GAT<br>
+   -get_hcp_graphs.py -> Go from segmentation maps to graphs. Calls brain_graph.py<br>
+   -preprocess_data.py -> Go from T1w MRIs to segmented maps.<br>
+   -graph_attention_model.py -> Main class for GAT implementation.<br>
+   -train_GAT.ipynb -> Jupyter notebook with training, validation, testing, and ROI identification.<br>
 
 3. GNN implemented on structural connectivity matrix comming from diffusion MRI: SC_GNN<br>
    -file.py -> description<br>
