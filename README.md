@@ -1,13 +1,19 @@
 # EC523_proj
 ENGEC 523 Project: Age prediction models for AD classification
 
+The goal of this project is to explore age prediction models based on brain MRI images. We used different levels of interpretability and multiple modalities. For future work, we aim to use these age prediction models to 
+
 We are testing 3 different models. The implementation of each is in a different directory:
-1. 3D CNN using weighted T1 MRI images.
+1. 3D CNN using weighted T1 MRI images: 3D_CNN<br>
+   -file.py -> description<br>
+   -file2.py -> description<br>
 
-2. GAT implemented on features extracted from T1 MRI images.<br>
-  -preprocess_mri.ipynb -> create graphs from T1<br>
-  -train_GAT.ipynb -> use graphs to train and predict age) 
+2. GAT implemented on features extracted from T1 MRI images: T1_GAT<br>
+   -file.py -> description<br>
+   -file2.py -> description<br>
 
-3. GNN implemented on structural connectivity matrix comming from diffusion MRI.
+3. GNN implemented on structural connectivity matrix comming from diffusion MRI: SC_GNN<br>
+   -file.py -> description<br>
+   -file2.py -> description<br>
 
-It is important to note that the training and testing was done on SCC which means that the training and testing python files will compile in this repository as the data residents on the SCC. The data is too large to move to this repository. The 3 best models however have been saved and can be tested with outside MRIs that the user can provide.
+Training and testing was done on BU's SCC. Data files and system setup need to be set up separately to fully run all pipelines, as they are not available in thie repository. The three best models have been saved and are available under the "models" folder.
