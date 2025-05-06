@@ -7,16 +7,10 @@ class GATRegressor(nn.Module):
     def __init__(self, in_channels, hidden_channels, heads=1):
         super().__init__()
 
-        # Instantiate all layers of the GAT regressor
-
         self.gat1 = GATConv(in_channels, hidden_channels, heads=heads, concat=True)
-
         self.gat2 = GATConv(hidden_channels * heads, hidden_channels, heads=1, concat=True)
-
         self.relu = nn.ReLU()
-
         self.pool = global_mean_pool
-
         self.regressor = nn.Sequential(
             nn.Linear(hidden_channels, hidden_channels//2),
             nn.ReLU(),
