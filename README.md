@@ -9,3 +9,5 @@ We are testing 3 different models. The implementation of each is in a different 
   -train_GAT.ipynb -> use graphs to train and predict age) 
 
 3. GNN implemented on structural connectivity matrix comming from diffusion MRI.
+
+It is important to note that the training and testing was done on SCC which means that the training and testing python files will compile in this repository as the data residents on the SCC. The data is too large to move to this repository. The 3 best models however have been saved and can be tested with outside MRIs that the user can provide.
